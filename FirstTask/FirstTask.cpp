@@ -4,7 +4,7 @@
 using namespace std;
 
 void toBinary(int value) {
-	cout << endl << "×èñëî â äâîè÷íîì âèäå:" << endl;
+	cout << endl << "Ã—Ã¨Ã±Ã«Ã® Ã¢ Ã¤Ã¢Ã®Ã¨Ã·Ã­Ã®Ã¬ Ã¢Ã¨Ã¤Ã¥:" << endl;
 	for (int i = (sizeof(value) * 8) - 1; i >= 0; --i)
 		cout << ((value >> i) & 1) << " ";
 	cout << endl << endl;
@@ -35,12 +35,12 @@ int findMaxLength(int c) {
 int main(void) {
 	setlocale(LC_ALL, "rus");
 	int a;
-	cout << "Ââåäèòå ÷èñëî: ";
+	cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã·Ã¨Ã±Ã«Ã®: ";
 	while (1) {
 		cin >> a;
 		if (cin.fail() || a > INT32_MAX || a < INT32_MIN) {
 			cin.clear();
-			cout << "\nÍåêêîðåêòíûé ââîä.\nÂâåäèòå ñíîâà: ";
+			cout << "\nÃÃ¥ÃªÃªÃ®Ã°Ã¥ÃªÃ²Ã­Ã»Ã© Ã¢Ã¢Ã®Ã¤.\nÃ‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã±Ã­Ã®Ã¢Ã : ";
 		}
 		else {
 			break;
@@ -49,6 +49,6 @@ int main(void) {
 	}
 	toBinary(a);
 	int M = findMaxLength(a);
-	cout << "Ìàêñèìàëüíàÿ äëèíà ïîñëåäîâàòåëüíîñòè åäèíèö: " << M << endl;
+	cout << "ÃŒÃ ÃªÃ±Ã¨Ã¬Ã Ã«Ã¼Ã­Ã Ã¿ Ã¤Ã«Ã¨Ã­Ã  Ã¯Ã®Ã±Ã«Ã¥Ã¤Ã®Ã¢Ã Ã²Ã¥Ã«Ã¼Ã­Ã®Ã±Ã²Ã¨ Ã¥Ã¤Ã¨Ã­Ã¨Ã¶: " << M << endl;
 	return 0;
 }
