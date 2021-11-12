@@ -29,13 +29,13 @@ void SetOfStacks::push(int val) {
 		stacks->push_back(newStack);
 	}
 	size++;
-	cout << "\nÊîëè÷åñâòî ñòåêîâ: " << stacks->size() << endl;
-	cout << "Âñåãî " << size << " ýëåìåíò(à)" << endl;
+	cout << "\nÐšÐ¾Ð»Ð¸Ñ‡ÐµÑÐ²Ñ‚Ð¾ ÑÑ‚ÐµÐºÐ¾Ð²: " << stacks->size() << endl;
+	cout << "Ð’ÑÐµÐ³Ð¾ " << size << " ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚(Ð°)" << endl;
 }
 
 int SetOfStacks::pop() {
 	if (stacks->empty()) {
-		throw "Ñåò ñòåêîâ ïóñò!";
+		throw "Ð¡ÐµÑ‚ ÑÑ‚ÐµÐºÐ¾Ð² Ð¿ÑƒÑÑ‚!";
 	}
 	Stack& last = stacks->back();
 	int data = last.pop();
