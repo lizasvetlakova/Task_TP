@@ -4,7 +4,7 @@
 using namespace std;
 
 void toBinary(int value) {
-	cout << endl << "×èñëî â äâîè÷íîì âèäå:" << endl;
+	cout << endl << "Число в двоичном виде:" << endl;
 	for (int i = (sizeof(value) * 8) - 1; i >= 0; --i)
 		cout << ((value >> i) & 1) << " ";
 	cout << endl << endl;
@@ -35,12 +35,12 @@ int findMaxLength(int c) {
 int main(void) {
 	setlocale(LC_ALL, "rus");
 	int a;
-	cout << "Ââåäèòå ÷èñëî: ";
+	cout << "Введите число: ";
 	while (1) {
 		cin >> a;
 		if (cin.fail() || a > INT32_MAX || a < INT32_MIN) {
 			cin.clear();
-			cout << "\nÍåêêîðåêòíûé ââîä.\nÂâåäèòå ñíîâà: ";
+			cout << "\nНеккоректный ввод.\nВведите снова: ";
 		}
 		else {
 			break;
@@ -49,6 +49,6 @@ int main(void) {
 	}
 	toBinary(a);
 	int M = findMaxLength(a);
-	cout << "Ìàêñèìàëüíàÿ äëèíà ïîñëåäîâàòåëüíîñòè åäèíèö: " << M << endl;
+	cout << "Максимальная длина последовательности единиц: " << M << endl;
 	return 0;
 }
