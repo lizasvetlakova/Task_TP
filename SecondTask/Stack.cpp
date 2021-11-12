@@ -20,7 +20,7 @@ void Stack::push(int val) {
 
 int Stack::pop() {
 	if (isEmpty()) {
-		throw "Ñòåê ïóñò!";
+		throw "Ð¡Ñ‚ÐµÐº Ð¿ÑƒÑÑ‚!";
 	}
 	int v;
 	v = top->value;
